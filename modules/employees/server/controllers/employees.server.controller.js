@@ -53,7 +53,7 @@ exports.delete = function (req, res) {
     employee.remove(function (err) {
         if(err){
             return res.status(400).send( {
-                message: errorHandler.getErrorMessagge(err)
+                message: errorHandler.getErrorMessage(err)
             });
         } else {
             res.json(employee);
