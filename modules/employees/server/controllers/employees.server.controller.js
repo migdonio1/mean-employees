@@ -13,7 +13,7 @@ exports.create = function(req, res) {
 
     employee.team = req.team;
 
-    article.save(function (err) {
+    employee.save(function (err) {
         if(err) {
             return res.status(400).send({
                 message: errorHandler.getErrorMessage(err)
@@ -58,9 +58,9 @@ exports.delete = function (req, res) {
         } else {
             res.json(employee);
         }
-    })
+    });
 };
 
 exports.list = function (req, res) {
-    Employee.find().sort('-created').populate()
+    Employee.find().sort('-created').populate();
 };

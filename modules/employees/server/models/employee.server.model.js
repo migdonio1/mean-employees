@@ -31,7 +31,7 @@ var EmployeeSchema = new Schema({
         default: getNow
     },
     salary: {
-        type: number,
+        type: Number,
         default: 0,
         min: 0
     },
@@ -40,7 +40,7 @@ var EmployeeSchema = new Schema({
         default: getNow
     },
     team: {
-        type: Scheme.ObjectId,
+        type: Schema.ObjectId,
         ref: 'Team'
     }
 });
