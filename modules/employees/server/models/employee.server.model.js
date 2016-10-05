@@ -9,7 +9,9 @@ var moment = require('moment-timezone'),
     Schema = mongoose.Schema;
 
 
-
+var getNow = function () {
+    return moment().tz("UTC").format();
+};
 
 var EmployeeSchema = new Schema({
     name: {
@@ -26,7 +28,7 @@ var EmployeeSchema = new Schema({
     },
     birthday: {
         type: Date,
-        default: moment().tz("America/Los_Angeles").format()
+        default: getNow
     },
     salary: {
         type: number,
@@ -35,7 +37,7 @@ var EmployeeSchema = new Schema({
     },
     created: {
         type: Date,
-        default: moment().tz("America/Los_Angeles").format()
+        default: getNow
     },
     team: {
         type: Scheme.ObjectId,
