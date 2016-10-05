@@ -22,7 +22,7 @@ var TeamSchema = new Schema({
     created: {
         type: Date,
         default: moment().tz("America/Los_Angeles").format()
-    },
+    }
 });
 
 mongoose.model('Team', TeamSchema);
