@@ -2,7 +2,7 @@
  * Created by migdonio1 on 10/4/16.
  */
 
-'use strict'
+'use strict';
 
 var moment = require('moment-timezone'),
     mongoose  = require('mongoose'),
